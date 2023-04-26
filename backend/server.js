@@ -1,5 +1,17 @@
 const express = require ("express");
 const bodyParser = require  ("body-parser")
+const {
+  initializeDatabase,
+  readTeachers,
+  readTeacherInfo,
+  addTeacher,
+  deleteTeacher,
+  addStudent,
+  readStudents,
+  readStudentInfo,
+  updateStudent,
+  deleteStudent
+} = require("./database.js");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,7 +30,7 @@ app.get("/listTeachers", async function (req, res) {
   console.log("Request received to list teachers");
   let data = await readTeachers();
   
-  res.setHeader("Content-Type", "application/json");s
+  res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
 });
 
