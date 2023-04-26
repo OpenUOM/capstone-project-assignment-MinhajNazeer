@@ -61,7 +61,6 @@ app.post("/deleteTeacher", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-`server.js`
 app.get("/listStudents", async function (req, res) {
   console.log("Request received to list students");
   let data = await readStudents();
