@@ -5,6 +5,7 @@ const {
   readTeachers,
   readTeacherInfo,
   addTeacher,
+  updateTeacher,
   deleteTeacher,
   addStudent,
   readStudents,
